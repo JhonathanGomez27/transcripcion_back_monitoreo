@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const { generateMinutes } = require('./orderdata');
-const { updateEstatus } = require('../monitoreo/monitoreo');
+// const { updateEstatus } = require('../monitoreo/monitoreo');
 
 if(process.env.NODE_ENV !== 'production'){
     require('dotenv').config();
@@ -33,7 +33,7 @@ const readFiles = async (nombre_archivo, fecha) => {
         })
     );
 
-    updateEstatus({nombre_archivo: nombre_archivo, estado: 'completed'});
+    // updateEstatus({nombre_archivo: nombre_archivo, estado: 'completed'});
 }
 
 const transcribe = async (params, nombre_archivo, fecha, file) => {
